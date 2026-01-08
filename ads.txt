@@ -1,0 +1,12 @@
+# ads.txt file for Google AdSense
+# This file is required by Google Publisher Policies for Authorized Inventory
+# Replace the publisher ID below with your actual AdSense publisher ID
+
+google.com, pub-6322294096281900, DIRECT, f08c47fec0942fa0
+
+# Instructions:
+# 1. Verify that pub-6322294096281900 is your correct AdSense publisher ID
+# 2. Upload this file to the root directory of your domain
+# 3. The file must be accessible at: http://yourdomain.com/ads.txt
+# 4. Do not change the format or add extra spaces
+# 5. For more information, visit: https://support.google.com/adsense/answer/7532444

@@ -81,18 +81,22 @@
     <!-- Cookie Consent / Privacy Notice -->
     <script>
         window.addEventListener('load', function () {
-            // Simple cookie consent notification
+            // Cookie consent notification compliant with Google AdSense policies
             if (!localStorage.getItem('cookieConsent')) {
                 var banner = document.createElement('div');
                 banner.id = 'cookie-banner';
-                banner.innerHTML = '<div style="position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: #fff; padding: 15px; text-align: center; z-index: 10000; font-size: 14px;">This website uses cookies to improve your experience and display relevant ads. By continuing to use this site, you accept our use of cookies. <a href="#privacy" style="color: #4CAF50; text-decoration: underline;">Learn more</a> <button onclick="acceptCookies()" style="margin-left: 15px; padding: 8px 20px; background: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px;">Accept</button></div>';
+                banner.innerHTML = '<div style="position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: #fff; padding: 15px; text-align: center; z-index: 10000; font-size: 14px; line-height: 1.6;">🍪 This website uses cookies and third-party services including Google AdSense to improve your experience and display relevant advertisements. Third parties may place and read cookies on your browser. By continuing to use this site, you accept our use of cookies. <a href="privacy-policy.html" style="color: #4CAF50; text-decoration: underline; font-weight: bold;">Privacy Policy</a> | <a href="https://www.google.com/policies/privacy/partners/" target="_blank" rel="noopener" style="color: #ffeb3b; text-decoration: underline; font-weight: bold;">How Google uses your data</a> <button onclick="acceptCookies()" style="margin-left: 15px; padding: 8px 20px; background: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px;">Accept</button></div>';
                 document.body.appendChild(banner);
             }
         });
 
         function acceptCookies() {
             localStorage.setItem('cookieConsent', 'true');
-            document.getElementById('cookie-banner').remove();
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+            var banner = document.getElementById('cookie-banner');
+            if (banner) {
+                banner.remove();
+            }
         }
     </script>
 
@@ -978,12 +982,14 @@
                         This website uses Google AdSense to display advertisements. Google may use cookies
                         to serve ads based on your prior visits. You can opt out of personalized advertising
                         by visiting <a href="https://www.google.com/settings/ads" target="_blank"
-                            rel="noopener noreferrer" style="color: #4CAF50;">Google Ads Settings</a>.
+                            rel="noopener noreferrer" style="color: #4CAF50;">Google Ads Settings</a>. 
+                        Learn more: <a href="https://www.google.com/policies/privacy/partners/" target="_blank"
+                            rel="noopener noreferrer" style="color: #ffeb3b; font-weight: bold;">How Google uses data</a>.
                     </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Siliguri-Darjeeling Tourism Guide. All rights reserved. | <a href="privacy-policy.html" style="color: white;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: white;">Terms of Service</a> | Travel responsibly and sustainably.</p>
+                <p>&copy; 2025 Siliguri-Darjeeling Tourism Guide. All rights reserved. | <a href="privacy-policy.html" style="color: white;">Privacy Policy</a> | <a href="terms-of-service.html" style="color: white;">Terms of Service</a> | <a href="https://www.google.com/policies/privacy/partners/" target="_blank" rel="noopener" style="color: #ffeb3b;">How Google uses your data</a> | Travel responsibly and sustainably.</p>
                 <p style="margin-top: 5px; font-size: 11px;">All information is provided for general guidance. Please
                     verify details before travel. Prices and conditions may change.</p>
             </div>

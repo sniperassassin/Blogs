@@ -12,14 +12,19 @@ function showCookieBanner() {
     banner.innerHTML = `
         <div class="cookie-consent-content">
             <p>
-                🍪 We use cookies to enhance your browsing experience, serve personalized ads via Google AdSense, and analyze our traffic. 
-                Third parties including Google may place and read cookies on your browser or use web beacons to collect information.
-                <a href="privacy-policy.html" target="_blank" style="color: #4CAF50; text-decoration: underline;">Learn more in our Privacy Policy</a>
+                🍪 <strong>This website uses cookies and third-party services</strong><br>
+                We use cookies and similar technologies to enhance your browsing experience, serve personalized advertisements through Google AdSense, and analyze our traffic. 
+                Third parties, including Google, may place and read cookies on your browser or use web beacons to collect information for advertising purposes.
+            </p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                By clicking "Accept", you consent to the use of cookies as described in our 
+                <a href="privacy-policy.html" target="_blank" style="color: #4CAF50; text-decoration: underline; font-weight: bold;">Privacy Policy</a> and to 
+                <a href="https://www.google.com/policies/privacy/partners/" target="_blank" rel="noopener" style="color: #4CAF50; text-decoration: underline; font-weight: bold;">Google's use of your data</a>.
             </p>
             <div class="cookie-consent-buttons">
                 <button onclick="acceptCookies()" class="btn-accept">Accept All Cookies</button>
                 <button onclick="rejectCookies()" class="btn-reject">Reject Non-Essential</button>
-                <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener" class="btn-manage">Manage Google Ads</a>
+                <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener" class="btn-manage">Manage Ad Settings</a>
             </div>
         </div>
     `;
